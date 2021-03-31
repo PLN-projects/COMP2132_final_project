@@ -1,0 +1,47 @@
+/*
+    Name: Patrick Neil
+    Date: March 30th 2021
+    Description: mixin page for Javascript final project
+*/
+
+//Create mixing for a round box border and allow the color to vary (shadow will always be the same)
+@mixin round_shadow_border($border-color){
+    box-shadow: 5px 10px grey;
+    border-radius: 10px;
+    border: solid 3px $border-color;
+}
+
+// I repeat these values for the dice container text so I put them here and invoke it
+@mixin dice_container_text(){
+    font-family:'Times New Roman';
+    margin-bottom: 2px;
+    font-weight: bold;
+    text-align:center;
+    background-color:darkslategray;
+    color:white;
+}
+
+//I can use this to easily make new pop-ups with varying width
+@mixin pop-up-container($width){
+    width: $width;
+    padding:10px;
+    background-color: darkgrey;
+    color: $lighterRed;
+    border:solid 1px black;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    z-index: 100;
+}
+
+// Thid mixin is for making round buttons roundness and the padding
+@mixin round_buttons($border-radius, $padding){
+    color: $casinoOrange;
+    background-color: $casinoBlack;
+    border-radius: $border-radius;
+    padding: $padding;
+    font-weight:bold;
+    border: solid $casinoRed 5px;
+}
+

@@ -1,0 +1,14 @@
+header {
+  background-color: #35654d;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'acmeregular';
+}
+
+header #header_dice_pictures {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

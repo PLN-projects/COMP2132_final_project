@@ -1,0 +1,244 @@
+<!--
+    Name: Patrick Neil
+    Date: March 25th 2021
+    Description: Main HTML markup page for Javascript project, this project is 
+    a dice game where I use my knowledge of Javascript to manipulate the DOM and
+    calculate who won the game. 
+
+    All my paths are relative paths not server root paths, in both my HTML and Javascript 
+    no path starts with a / I only have paths that start with ./, ../ or the folder name.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Patrick Neil Dice Game</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <h1>Javascript Final Project - Dice Game!</h1>
+                <section id="header_dice_pictures">
+                    <img src="images/dice/dice_face_1.jpg" alt="Dice picture 1">
+                    <img src="images/dice/dice_face_2.jpg" alt="Dice picture 2">
+                    <img src="images/dice/dice_face_3.jpg" alt="Dice picture 3">
+                    <img src="images/fuzzy_dice.jpg" alt="Fuzzy Dice picture">
+                    <img src="images/dice/dice_face_4.jpg" alt="Dice picture 4">
+                    <img src="images/dice/dice_face_5.jpg" alt="Dice picture 5">
+                    <img src="images/dice/dice_face_6.jpg" alt="Dice picture 6">
+                </section>
+            </header>
+            <main>
+                <section id="entire_game_output">
+                    <div id="player_output">
+                        <article>
+                            <div id="player1">
+                                <h2>Player 1</h2>
+                                <p>Total Score: None</p>
+                                <p>Turn Score: None</p>
+                            </div>
+                            <div class="card_turn_output">
+                                <div class="turn_container" id="Player1_turn1">
+                                    <p>Turn 1</p>
+                                    <div class="roll_container">
+                                        <div>
+                                            <p>Dice# 1</p>
+                                            <img class="dice1" src="images/dice/dice_face_1.jpg" alt="dice picture">
+                                        </div>
+                                        <div>
+                                            <p>Dice# 2</p>
+                                            <img class="dice2" src="images/dice/dice_face_1.jpg" alt="dice picture">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="turn_container" id="Player1_turn2">
+                                    <p>Turn 2</p>
+                                    <div class="roll_container" >
+                                        <div>
+                                            <p>Dice# 1</p>
+                                            <img class="dice1" src="images/dice/dice_face_1.jpg" alt="dice picture">
+                                        </div>
+                                        <div>
+                                            <p>Dice# 2</p>
+                                            <img class="dice2" src="images/dice/dice_face_1.jpg" alt="dice picture">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="turn_container" id="Player1_turn3">
+                                    <p>Turn 3</p>
+                                    <div class="roll_container">
+                                        <div>
+                                            <p>Dice# 1</p>
+                                            <img class="dice1" src="images/dice/dice_face_1.jpg" alt="dice picture">
+                                        </div>
+                                        <div>
+                                            <p>Dice# 2</p>
+                                            <img class="dice2" src="images/dice/dice_face_1.jpg" alt="dice picture">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article>
+                            <div id="player2">
+                                <h2>Player 2</h2>
+                                <p>Total Score: None</p>
+                                <p>Turn Score: None</p>
+                            </div>
+                            <div class="card_turn_output">
+                                <div class="turn_container" id="Player2_turn1">
+                                    <p>Turn 1</p>
+                                    <div class="roll_container">
+                                        <div>
+                                            <p>Dice# 1</p>
+                                            <img class="dice1" src="images/dice/dice_face_1.jpg" alt="dice picture">
+                                        </div>
+                                        <div>
+                                            <p>Dice# 2</p>
+                                            <img class="dice2" src="images/dice/dice_face_1.jpg" alt="dice picture">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="turn_container" id="Player2_turn2">
+                                    <p>Turn 2</p>
+                                    <div class="roll_container" >
+                                        <div>
+                                            <p>Dice# 1</p>
+                                            <img class="dice1" src="images/dice/dice_face_1.jpg" alt="dice picture">
+                                        </div>
+                                        <div>
+                                            <p>Dice# 2</p>
+                                            <img class="dice2" src="images/dice/dice_face_1.jpg" alt="dice picture">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="turn_container" id="Player2_turn3">
+                                    <p>Turn 3</p>
+                                    <div class="roll_container">
+                                        <div>
+                                            <p>Dice# 1</p>
+                                            <img class="dice1" src="images/dice/dice_face_1.jpg" alt="dice picture">
+                                        </div>
+                                        <div>
+                                            <p>Dice# 2</p>
+                                            <img class="dice2" src="images/dice/dice_face_1.jpg" alt="dice picture">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <h2 id="turnCount">Click New Game to Start.</h2>
+                    <div id="dice_table">
+                        <img src="./images/dice_table2.png" alt="dice table">
+                        <div class="table_turn_output">
+                            <div class="turn_container" id="table_turn1">
+                                <p>Turn 1</p>
+                                <div class="roll_container">
+                                    <div>
+                                        <p>Dice# 1</p>
+                                        <img class="dice1" src="images/dice/dice_face_1.jpg" alt="dice picture">
+                                    </div>
+                                    <div>
+                                        <p>Dice# 2</p>
+                                        <img class="dice2" src="images/dice/dice_face_1.jpg" alt="dice picture">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="turn_container" id="table_turn2">
+                                <p>Turn 1</p>
+                                <div class="roll_container">
+                                    <div>
+                                        <p>Dice# 1</p>
+                                        <img class="dice1" src="images/dice/dice_face_1.jpg" alt="dice picture">
+                                    </div>
+                                    <div>
+                                        <p>Dice# 2</p>
+                                        <img class="dice2" src="images/dice/dice_face_1.jpg" alt="dice picture">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="game_buttons">
+                        <button id="play">New Game</button>
+                        <button id="roll">Roll Dice</button>
+                    </div>
+                </section>
+
+                <div id="article-container">
+                    <nav class="article_nav">
+                        <ul>
+                            <li><a href="#art-01-content" class="active">About Dice Game</a></li>
+                            <li><a href="#art-02-content">How To Play</a></li>
+                            <li><a href="#art-03-content">The Rules</a></li>
+                        </ul>
+                    </nav>
+                    <section id="instructions">
+                        <article id="art-01-content" class="article_content">
+                            <h3>About Dice Game!</h3>
+                            <p>
+                                Welcome to the dice game! This website uses Javascript to make a website
+                                that allows you to play a game of dice with a computer opponent. 
+                                There are no prizes and you cannot bet any money since we don't 
+                                support gambling but you can play as many new games as you like. 
+                                Play to your hearts content!
+                            </p>
+                        </article>
+                        <article id="art-02-content" class="article_content">
+                            <h3>How to play</h3>
+                            <p>
+                                Press the <strong>New Game</strong> button to start. After you press that 
+                                button a form will appear to ask you your name, once you enter your name and press 
+                                the <strong>submit</strong> button on the form the game will start. 
+                                When the game starts, press the <strong>Roll Dice</strong> button to roll your dice. 
+                                Every time you roll your dice, your CPU opponent will also roll their dice. 
+                                You can press the New Game button at any time to start a new game.
+                            </p>
+                        </article>
+                        <article id="art-03-content" class="article_content">
+                            <h3>Rules of Dice game</h3>
+                            <ul>
+                                <li>The game ends once the player rolls their dice 3 times.</li>
+                                <li>Each time you press the <strong>roll dice</strong> button you will roll 2 dice.</li>
+                                <li>If you roll a 1 on either of your dices, you gain zero points on your turn.</li>                                   
+                                <li>If your two dice are the exact same number, you gain double the points.</li>
+                                <li>If you roll ones on both dice you do <strong>not</strong> gain double points. 
+                                    You will gain zero points.</li>
+                                <li>When the game ends, the person with the highest score wins.</li>
+                            </ul>
+                        </article>
+                    </section>
+                </div>
+            </main>
+            <footer>
+                <p>&copy; Comp-2312 Final Project</p>
+                <p>Javascript Dice Game</p>
+            </footer>
+        </div> <!--Wrapper End--->
+
+        <section id="form_pop-up">
+            <form action="#">
+                <h4>Please enter your name:</h4>
+                <input type="text" name="name" id="name" placeholder="Your Name">
+                <input type="submit" value="Submit">
+            </form>
+            <p id="form_errors"></p>
+        </section>
+        <section id="winner_pop-up">
+            <div id="winner_content"></div>
+            <button id="btn_close">X</button>
+        </section>
+        <script src="scripts/jquery-3.6.0.min.js"></script>
+        <script src="scripts/content.js"></script>
+        <script src="scripts/dice.js"></script>
+    </body>   
+</html>

@@ -1,0 +1,31 @@
+/*
+    Name: Patrick Neil
+    Date: March 30th 2021
+    Description: Font styling, size controls and imports for Javascript project
+*/
+
+// font import for headers
+@font-face {
+    font-family: 'acmeregular';
+    src: url('../fonts/acme-regular-webfont.woff2') format('woff2'),
+         url('../fonts/acme-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-size: 1.1rem; /*Can change all font size here proportionally*/
+}
+
+//Set all p tags and ul tags to tahoma unless I specify otherwise, some pag tags use different fonts
+body p, ul{
+    font-family:tahoma;
+}
+/* Change font size proportions here*/
+h1{ font-size:1.8rem }
+h2{ font-size:1.7rem }
+h3{ font-size:1.5rem }
+h4{ font-size:1.4rem }
+h5{ font-size:1.2rem }
+h6{ font-size:1.1rem }
+/*-----------------------------------*/

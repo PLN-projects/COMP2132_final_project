@@ -1,0 +1,15 @@
+/*
+    Name: Patrick Neil
+    Date: March 28th 2021
+    Description: Footer styling for Javascript project
+*/
+
+footer {
+    background-color: $casinoGreen;
+    display:flex;
+    justify-content:space-evenly;
+    p{
+        font-weight:bold;
+        color:$blackAccent;
+    }
+}

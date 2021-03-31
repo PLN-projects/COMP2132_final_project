@@ -1,0 +1,117 @@
+/*
+    Name: Patrick Neil
+    Date: March 25th 2021
+    Description: This is the styling page for the game output manipulated by Javascript
+*/
+
+#entire_game_output{
+    // All of my game output is inside this section
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    #player_output {
+        //This is where I seperate player cards and apply styling to them
+        display:flex;
+        min-width:90%;
+        justify-content:space-around;
+        align-items:center;
+        margin-top:10px;
+        article {
+            //make the border for my player cards
+            @include round_shadow_border(brown);
+            min-width:45%; // The cards side by side take 90% of the viewport
+            padding: 10px;
+            margin-bottom: 10px;
+            // H2 styling for player cards
+            h2 {
+                color:$blackAccent;
+                font-family: 'acmeregular';
+                margin-top: 0px;
+                border-bottom: dotted blue 1px;
+                text-align:left;
+            }
+        }
+        .card_turn_output{
+            // lay my turn outputs for players cards side by side
+            display:flex;
+            justify-content:space-evenly;
+
+            //Make all dice containers invisible javascript will make the visible as roll dice is pressed
+            #Player1_turn1, #Player1_turn2, #Player1_turn3, 
+            #Player2_turn1, #Player2_turn2, #Player2_turn3{
+                display:none;
+            }
+            p{
+                @include dice_container_text; // I have allot of rules for dice container text so I made a mixin
+            }
+        }
+    }
+    //Stores my entire turn container (including the <p> tag above the dice pictures
+    .turn_container{
+        width:160px;
+        background-color:paleturquoise;
+        p{
+            margin-top:0px;
+            margin-bottom:10px;
+        }
+    }
+    //Stores my dice pictures side by side
+    .roll_container{
+        p{
+            margin-bottom:5px;
+        }
+        display:flex;
+        justify-content:space-between;
+    }
+
+    #game_buttons {
+        margin-top:20px;
+        margin-bottom: 50px;
+        display:flex;
+        justify-content:center;
+        button{
+            margin-right:20px;
+            @include round_buttons(85%, 12px); // Styling for player buttons to make them look like ovals
+            outline:none; // remove the outline for buttons, this looks better when styles are applied
+        }
+        button:hover{
+            color:white;
+        }
+        button:active{
+            border-color:$casinoBlack;
+        }
+    }
+
+    #roll{
+        display:none;
+    }
+    //Make my dice table a background
+    #dice_table{
+        position:relative;
+    }
+    // Table turns only display after the first turn, they are manipulated by javascript so only 2 turn IDs are needed
+    .table_turn_output{
+        #table_turn1, #table_turn2{
+            display:none;
+        }
+        p{
+            @include dice_container_text; // I have allot of rules for dice container text so I made a mixin
+        }
+    }
+
+    //position a clone of player 1's dice container onto the middle left side of the table background
+    #table_turn1{
+        position:absolute;
+        top:75px;
+        left:85px;
+    }
+    
+    //position a clone of player 2's dice container onto the middle right side of the table background
+    #table_turn2{
+        position:absolute;
+        top:75px;
+        right:85px;
+    }
+}
+

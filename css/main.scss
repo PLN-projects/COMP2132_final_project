@@ -1,0 +1,59 @@
+/*
+    Name: Patrick Neil
+    Date: March 25th 2021
+    Description: Main Styling rules for Javascript project, Game output is in main
+    but it us styled on a seperate SCSS page.
+*/
+
+main {
+    flex:2;
+    background-color:wheat;
+
+    .article_nav {
+        margin-bottom:40px;
+        ul {
+            display:flex;
+            justify-content: space-around;
+            list-style-type:none;
+            margin-top:10px;
+            a{
+                @include round_buttons(50%, 20px); //Make Nav links round
+                text-decoration: none;
+            }
+            a:hover{
+                color:white
+            }
+        }
+    }
+    // Apply styling to the articles within the instructions section
+    #instructions{
+        article{
+            padding: 10px;
+            h3{
+                border-bottom: dotted blue 1px;
+                margin-top: 0px;
+            }
+            width:50%;
+            margin:auto;
+
+            ul{
+                list-style-type:square;
+            }
+        }
+
+        // use a mixin to make the border colors vary between my article borders
+        #art-01-content{
+            @include round_shadow_border(red);
+            margin-bottom:20px;
+            
+        }
+        #art-02-content{
+            @include round_shadow_border(green);
+            margin-bottom:20px;
+        }
+        #art-03-content{
+            @include round_shadow_border(blue);
+            margin-bottom:20px;
+        }
+    } 
+}

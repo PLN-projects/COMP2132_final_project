@@ -1,0 +1,20 @@
+/*
+    Name: Patrick Neil
+    Date: March 28th 2021
+    Description: This is the header styling page for the javascript project.
+*/
+
+header {
+    background-color: $casinoGreen;
+    text-align: center;
+    h1 {
+        font-family: 'acmeregular';
+        color: $blackAccent;
+    }
+
+    #header_dice_pictures{
+        display: flex;
+        justify-content: space-evenly;
+        align-items:center;
+    }
+}

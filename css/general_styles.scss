@@ -1,0 +1,46 @@
+body {
+    background-image: url("../images/money_background.jpg");
+}
+
+    /*Scalling images*/
+    img {
+        max-width: 100%;
+        height:auto;
+    }
+
+    header, main, footer {
+        border:solid 1px black;
+    }
+
+.error_border{
+    border:solid $lighterRed 3px;
+}
+
+#form_pop-up{
+    @include pop-up-container(300px);
+    display:none;
+    h4{
+        margin-top: 0px;
+    }
+    
+}
+
+#winner_pop-up{
+    @include pop-up-container(350px);
+    display:none;
+    text-align:center;
+
+    h2{
+        margin-top: 0px;;
+    }
+    
+
+    #btn_close{
+        //Make a windows style red X close button
+        color: white;
+        background-color:$lighterRed;
+        position:absolute;
+        top:0px;
+        right:0px;
+    }
+}

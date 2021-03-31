@@ -1,0 +1,24 @@
+/*
+    Name: Patrick Neil
+    Date: March 25th 2021
+    Description: main style import page, this consists of imports since my styling rules are segregated
+*/
+
+//importing variables and mixins
+@import "variables.scss";
+@import "mixins.scss";
+
+// normalize, includes box-model stylings
+@import "normalize.scss";
+
+// font imports
+@import "fonts.scss";
+
+// General page styles
+@import "wrapper.scss"; // wrapper containing the body
+@import "general_styles.scss"; // General style rules for the whole page and anything outside of the wrapper
+@import "header.scss"; // header styling
+@import "main.scss"; // main styling, gaming output is done in a seperate SCSS page
+@import "gameOutput.scss"; // all Game output within main
+@import "footer.scss"; // footer styling
+
